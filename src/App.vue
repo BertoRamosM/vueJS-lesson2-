@@ -1,21 +1,31 @@
 <template>
  <h1>{{title}}</h1>
- <input type="text" ref="name">
- <button @click="handleClick">Click event</button>
-</template>
+ <Modal />
+<!--  <input type="text" ref="name">
+<button @click="handleClick">Click event</button> -->
+ </template>
 
 <script>
+import Modal from './components/Modal.vue'
+
 export default {
   name: 'App',
+
+  components: {
+    Modal
+  },
+
   data() {
     return {
       title: 'My first vue App'
     }
   },
   methods: {
-    handleClick() {
+    /* handleClick() {
       console.log(this.$refs.name)
-    }
+      this.$refs.name.classList.add('active')
+      this.$refs.name.focus()
+    } */
   }
 }
 </script>
@@ -35,5 +45,8 @@ h1{
   border-bottom: 1px solid #ddd;
   display: inline-block;
   padding-bottom: 10px;
+}
+.active{
+  background: blue;
 }
 </style>
