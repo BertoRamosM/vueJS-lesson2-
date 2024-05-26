@@ -1,11 +1,18 @@
 <template>
   <div class="backdrop">
     <div class="modal">
-      <h1>modal title</h1>
-      <p>modal content</p>
+      <h1>{{ header }}</h1>
+      <p>{{ text }}</p>
     </div>
   </div>
 </template>
+
+
+<script>
+export default {
+  props: ['header', 'text']
+}
+</script>
 
 <style scoped>
 .modal{
@@ -28,5 +35,9 @@
   color: #03cfb4;
   border: none;
   padding: 0;
+}
+
+.modal p{
+  font-style: normal;
 }
 </style>
