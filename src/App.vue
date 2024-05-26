@@ -2,7 +2,10 @@
  <h1>{{title}}</h1>
  <p>Welcome...</p>
  <div v-if="showModal">
- <Modal :header="header" :text="text" theme="sale" :toggleModal="toggleModal"/>
+ <Modal  theme="sale" @close="toggleModal">
+  <h1>Ninja giveaway</h1>
+  <p>Grab your ninja swag for half price!</p>
+</Modal >
  </div>
  <button @click="toggleModal">open modal</button>
 
