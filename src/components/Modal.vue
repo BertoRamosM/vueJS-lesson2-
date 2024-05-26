@@ -24,7 +24,7 @@
   height: 100%;
 }
 
-h1{
+.modal h1{
   color: #03cfb4;
   border: none;
   padding: 0;
